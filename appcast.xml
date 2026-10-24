@@ -6,6 +6,31 @@
         <description>Updates for Rigly.</description>
         <language>en</language>
         <item>
+            <title>1.1.0</title>
+            <pubDate>Sat, 24 Oct 2026 18:32:17 +0200</pubDate>
+            <sparkle:version>1.1.0</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Textures and materials
+
+Characters now look like their packs, in Rigly and in Godot.
+
+- **Textures are found automatically.** When a file doesn't embed its textures, Rigly looks near it: by material name, through a pack's material list (such as Synty's `MaterialList_*.txt`), or by matching names. Texture variants are never guessed: you choose.
+- **A Materials section** in the Characters view shows each material's texture and where it came from. Its Texture menu offers nearby textures, any image file, or no texture. Choices are saved, and textures stay when a pack moves.
+- **Normal and emission maps** next to a texture (`_Normal`, `_Emission` and similar) are used too.
+- **Both previews show textures:** the Godot preview with normal maps and emission, and the Canvas preview and thumbnails with the texture colors.
+- **Exports carry them into Godot.** GLBs embed the textures and maps, and Godot validation checks that each texture arrived with the right colors.
+- **Attachments** such as hair and hats have their own materials too, shown while you edit them.
+
+## Also
+
+- Help has a new Textures and Materials topic.
+- The download is now signed as well as notarized.
+]]></description>
+            <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.1.0/Rigly-1.1.0.dmg" length="44121735" type="application/octet-stream" sparkle:edSignature="mAgquFpGTNgAnyrjHGwYHTECdGQVCLHMxUOQq5ouzSOS2LLkcpo7xcRVkugra0Ia7tI9Q6ot+6dST5wd48C/AA=="/>
+        </item>
+        <item>
             <title>1.0.2</title>
             <pubDate>Sat, 24 Oct 2026 15:46:26 +0200</pubDate>
             <sparkle:version>1.0.2</sparkle:version>
@@ -22,15 +47,6 @@
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.0.1/Rigly-1.0.1.dmg" length="43908594" type="application/octet-stream" sparkle:edSignature="J1fqcTwQGfPTg7jTFMAQPFhYUI86Goh744LCaL4/tF5T5RvXgU0OjhTm8W7wcdsUvG4JUrgiUhXiFI25kCJmDQ=="/>
-        </item>
-        <item>
-            <title>1.0.0</title>
-            <pubDate>Sat, 24 Oct 2026 14:35:04 +0200</pubDate>
-            <sparkle:version>1.0.0</sparkle:version>
-            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.0.0/Rigly-1.0.0.dmg" length="40344175" type="application/octet-stream" sparkle:edSignature="1gg/mQCgDgfXVjMPtpXfSK+ShmQpBWiav01TpSxDDJ1QmJMRdwZTl5jkYOtMRPybK0dvpA48HYv7uFC7MoB2Dw=="/>
         </item>
     </channel>
 </rss>
