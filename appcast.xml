@@ -6,6 +6,24 @@
         <description>Updates for Rigly.</description>
         <language>en</language>
         <item>
+            <title>1.1.1</title>
+            <pubDate>Sat, 24 Oct 2026 20:56:05 +0200</pubDate>
+            <sparkle:version>1.1.1</sparkle:version>
+            <sparkle:shortVersionString>1.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Fixes
+
+- **Textured characters no longer look white in the Godot preview.** Materials with an emission map glowed white over their texture; emission now tints the map, as in glTF and in exports.
+- **Characters without a texture are no longer blank white.** When a material is plain white (waiting for a texture that wasn't found), previews and thumbnails use a neutral clay instead. Choose the texture in Characters › Materials. Exports are unchanged.
+
+## Also
+
+- **Thumbnails come alive on hover.** Hovering an animation in the library plays it; hovering a character turns it around. Reduce Motion keeps them still.
+]]></description>
+            <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.1.1/Rigly-1.1.1.dmg" length="44131072" type="application/octet-stream" sparkle:edSignature="bYAypG0k6t7ARXPhmCgC53snuq6Nc1CGnM42MEhiPi58IrFeLml8xJ4UCjo54hADzGPjoCn8Pf/PKoxZ4HiEBw=="/>
+        </item>
+        <item>
             <title>1.1.0</title>
             <pubDate>Sat, 24 Oct 2026 18:32:17 +0200</pubDate>
             <sparkle:version>1.1.0</sparkle:version>
@@ -38,15 +56,6 @@ Characters now look like their packs, in Rigly and in Godot.
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.0.2/Rigly-1.0.2.dmg" length="43908568" type="application/octet-stream" sparkle:edSignature="oVl3QFuwryayHIzIlucuhaOGZATAWo8qWCWRUam7T+AuILORIxoqVYIkvqvrdbUxIhLJUW97srCtCBLeLpxMCA=="/>
-        </item>
-        <item>
-            <title>1.0.1</title>
-            <pubDate>Sat, 24 Oct 2026 15:39:42 +0200</pubDate>
-            <sparkle:version>1.0.1</sparkle:version>
-            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.0.1/Rigly-1.0.1.dmg" length="43908594" type="application/octet-stream" sparkle:edSignature="J1fqcTwQGfPTg7jTFMAQPFhYUI86Goh744LCaL4/tF5T5RvXgU0OjhTm8W7wcdsUvG4JUrgiUhXiFI25kCJmDQ=="/>
         </item>
     </channel>
 </rss>
