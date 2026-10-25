@@ -6,6 +6,58 @@
         <description>Updates for Rigly.</description>
         <language>en</language>
         <item>
+            <title>1.2.0</title>
+            <pubDate>Sun, 25 Oct 2026 17:22:55 +0100</pubDate>
+            <sparkle:version>1.2.0</sparkle:version>
+            <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Game-ready Godot exports
+
+Exported characters now come with what a game needs, not just their animations.
+
+- **An AnimationTree you can use as is.** Every clip is a state, and every state crossfades to every other one, so `travel()` blends straight into a state. Clips that don't loop (attacks, jumps, emotes) can fire over it through an **Action** OneShot. With extracted root motion, the tree's root motion track is set, ready for a `CharacterBody3D`.
+- **A locomotion blend space.** Rigly measures how fast and which way each locomotion loop moves on the character, and blends the walks, runs and strafes with an idle by velocity.
+- **Footsteps and event markers as signals.** Every animation gets a `footstep` event where a foot touches down. Name your own moments, such as a sword's hit, in the new **Markers** lane of the Event Markers tab. In Godot, the scene emits `footstep(foot)` and `marker(name)`.
+- **Ragdolls and hitboxes** (off at first): physical bones sized from the mesh, with joints that bend like a body, and hitbox areas that tell you which bone was hit.
+
+## One animation library for every character
+
+With Godot resources, a build writes each clip once, in `rigly_humanoid.anims.tres`, and every humanoid character plays it. Ten characters with twenty clips give twenty animations, not two hundred, with the same motion as before. Clips that can't be shared go into a small library per character.
+
+Or let Godot do the retargeting: **Godot humanoid retargeting** writes import settings so Godot maps your characters onto its humanoid profile, and animations retargeted in Godot from other sources play on them.
+
+## Straight into your Godot project
+
+Choose your project in the Export view and click **Install Plugin…**. Each export then lands in the project's `res://rigly/` folder, with the same file names every time, and a **Rigly** dock in Godot's editor lists your characters with their validation. It refreshes when you export again.
+
+## Quadrupeds
+
+Four-legged characters retarget too. Rigly recognizes them by their shape, whatever their bones are called, and maps them as Spine, Head, Front Legs, Back Legs and Tail. Foot checks, footsteps and foot locking cover all four feet, and ragdolls, hitboxes and Find Similar work for them too. The sample library has a wolf and a horse for the creature animations.
+
+## A better library
+
+- **Find Similar**: right-click an animation to list the ones that move most like it, from every pack, whatever they're called.
+- **Variants**: save a character's texture choices as named variants, such as a pack's A and B textures, and export each as its own character.
+- **Hands**: a Hands section shows how each finger maps and whether the clip moves it, and the motion checks flag fingers bending back.
+- **Removing characters** from the library, with ⌫ or **Remove…**.
+
+## Changes to know about
+
+- **The AnimationTree's paths changed.** Its root is now a BlendTree with the state machine inside it. Use `parameters/StateMachine/playback` where you used `parameters/playback`, and `parameters/StateMachine/Locomotion/blend_position` for the blend space.
+- **Exports share one animation library by default.** Humanoid characters' bones are named after Godot's humanoid profile, and their GLBs carry no animations; their scenes play the shared library. For a library per character as before, turn off **With a shared animation library** in the Export view (or use `rigly-export --no-shared-library`).
+- **Sample content is hidden at first.** A neutral **Mannequin** is always there to preview on. Turn on **Settings › Library › Show sample characters and animations** for the sample characters and animations.
+- **Vertical orbiting is inverted** in the 3D views: dragging up and down tilts the camera the other way than before.
+- **Your library is upgraded.** 1.1.1 can still open it, but editing a rig profile there drops what it doesn't know, such as a quadruped mapping.
+
+## Also
+
+- Help covers all of the above, with new screenshots.
+- `rigly-export` gains `--godot-project`, `--install-plugin`, `--ragdoll`, `--hitboxes`, `--godot-retargeting`, `--no-shared-library`, `--no-footsteps` and `--no-blend-space`.
+]]></description>
+            <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.2.0/Rigly-1.2.0.dmg" length="44697316" type="application/octet-stream" sparkle:edSignature="BeaqceSAkUp4fMG9VvG1UpK9kjbipw7WrSz1Bkvff4lWVsaWLr84nHhHSBHo5Dkfip8WIWq1LBno6lzRgZblCw=="/>
+        </item>
+        <item>
             <title>1.1.1</title>
             <pubDate>Sat, 24 Oct 2026 20:56:05 +0200</pubDate>
             <sparkle:version>1.1.1</sparkle:version>
@@ -47,15 +99,6 @@ Characters now look like their packs, in Rigly and in Godot.
 - The download is now signed as well as notarized.
 ]]></description>
             <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.1.0/Rigly-1.1.0.dmg" length="44121735" type="application/octet-stream" sparkle:edSignature="mAgquFpGTNgAnyrjHGwYHTECdGQVCLHMxUOQq5ouzSOS2LLkcpo7xcRVkugra0Ia7tI9Q6ot+6dST5wd48C/AA=="/>
-        </item>
-        <item>
-            <title>1.0.2</title>
-            <pubDate>Sat, 24 Oct 2026 15:46:26 +0200</pubDate>
-            <sparkle:version>1.0.2</sparkle:version>
-            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/memfrag/Rigly-Releases/releases/download/1.0.2/Rigly-1.0.2.dmg" length="43908568" type="application/octet-stream" sparkle:edSignature="oVl3QFuwryayHIzIlucuhaOGZATAWo8qWCWRUam7T+AuILORIxoqVYIkvqvrdbUxIhLJUW97srCtCBLeLpxMCA=="/>
         </item>
     </channel>
 </rss>
